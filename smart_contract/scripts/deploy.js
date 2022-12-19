@@ -7,23 +7,20 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const PDF = await ethers.getContractFactory("PDF")
-  const pdf = await PDF.deploy()
+  const Test = await ethers.getContractFactory("Test")
+  const test = await Test.deploy()
 
   const Database = await ethers.getContractFactory("Database")
-  const database = await Database.deploy()
 
 
 
-  console.log("PDF contract address ", pdf.address)
-  console.log("Database contract address ", database.address)
+  console.log("test contract address ", test.address)
 
   // deploy contracts here:
   
   
   // For each contract, pass the deployed contract and name to this function to save a copy of the contract ABI and address to the front end.
-  saveFrontendFiles(pdf, "PDF");
-  saveFrontendFiles(database, "Database");
+  saveFrontendFiles(test, "PDF");
 }
 
 function saveFrontendFiles(contract, name) {
