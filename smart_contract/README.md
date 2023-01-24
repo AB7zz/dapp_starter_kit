@@ -1,1 +1,0 @@
-# This is a repository that you are free to clone to use for your Dapp projects
