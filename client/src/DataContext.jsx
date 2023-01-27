@@ -36,7 +36,7 @@ export const DataContextProvider = ({children}) => {
             <DataContext.Provider
             value={{
                 account,
-                test,
+                // test,
                 web3Handler
             }}
             >
